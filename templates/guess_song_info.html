@@ -1,88 +1,102 @@
 {% extends "layout.html" %}
-
 {% block title %}Spotify{% endblock %}
-
 {% block head %}
-        <!-- Link css / js file for route -->
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/guess.css') }}">
-
-
-        <script src="{{ url_for('static', filename='js/guess.js') }}"></script>
-        <script src="{{ url_for('static', filename='js/coverflow_class.js') }}"></script>
+    <!-- Link css / js file for route -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/guess.css') }}">
+    <script src="{{ url_for('static', filename='js/guess.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/coverflow_class.js') }}"></script>
 {% endblock %}
-
 {% block main %}
-<hr class="top_hr_wrapper">
-<hr class="top_hr_wrapper">
-
-
-<div id="container_songGuessing">
+    <hr class="top_hr_wrapper">
+    <hr class="top_hr_wrapper">
+    <div id="container_songGuessing">
         <div id="mediaContainer">
-                
-                <div id="coverSongGuessing">
-                        <div class="metadata_wrapper">
-                                <h3 class="metadata_songTitle">Karma Police</h3> 
-                                <p class="metadata_artist">Artist: <span style="text-transform: uppercase;">Radiohead</span></p>
-                        </div>
+            <div id="coverSongGuessing">
+                <div class="metadata_wrapper">
+                    <h3 class="metadata_songTitle">Karma Police</h3>
+                    <p class="metadata_artist">
+                        Artist: <span style="text-transform: uppercase;">Radiohead</span>
+                    </p>
                 </div>
-                
-                <div id="songGuessing_pp">
-                        <img class="cdImage" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F013%2F442%2F219%2Foriginal%2Fblank-cd-or-dvd-disc-png.png&f=1&nofb=1&ipt=26e72fd1228fa534526ac44655cdde3b8128a517cb8f97cd4ba7ed787a5aeb33&ipo=images" alt="CD Image">
-                        
-                        <div id="svg-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
-                                </svg>
-                        </div> <!-- End of svg-container-->
-                        
-                </div> <!-- End of songGuessing_pp-->
-        </div> <!-- End of mediaContainer-->
-        
+            </div>
+            <div id="songGuessing_pp">
+                <img class="cdImage"
+                     src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F013%2F442%2F219%2Foriginal%2Fblank-cd-or-dvd-disc-png.png&f=1&nofb=1&ipt=26e72fd1228fa534526ac44655cdde3b8128a517cb8f97cd4ba7ed787a5aeb33&ipo=images"
+                     alt="CD Image">
+                <div id="svg-container">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="1.5"
+                         stroke="currentColor"
+                         class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                    </svg>
+                </div>
+                <!-- End of svg-container-->
+            </div>
+            <!-- End of songGuessing_pp-->
+        </div>
+        <!-- End of mediaContainer-->
         <div id="wrapper_infoAndForm">
-                <p id="artistGuessInfo">Artist Name:</p>
-                
-                <form class="searchForm">
-                        
-                        
-                        <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
-                        
-                        <input class="ryuji_button" autocomplete="off" autocapitalize="off" name="Query Song" placeholder="Type your guess.." type="text">
-                        
-                        <svg id="clear_button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="clear-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        
-                </form>
-
-                <br> 
-                <br> 
-
-                <p id="artistGuessInfo">Song Name:</p>
-                
-                <form class="searchForm">
-                        
-                        
-                        <svg id="searchIcon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
-                        
-                        <input class="ryuji_button" autocomplete="off" autocapitalize="off" name="Query Song" placeholder="Type your guess.." type="text">
-                        
-                        <svg id="clear_button" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="clear-icon">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        
-                </form>
-                
-                
-                <audio id="audioExtract" hidden>
-                        <source src="https://raw.githubusercontent.com/RiyujinD/final_project_cs50/master/static/audio/karmaPolice.mp3" type="audio/mp3">
-                        Your browser does not support the audio element.
-                </audio>
-                
-                
-                
-                {% endblock %}
-                
+            <p id="artistGuessInfo">Artist Name:</p>
+            <form class="searchForm">
+                <svg id="searchIcon"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                <input class="ryuji_button"
+                       autocomplete="off"
+                       autocapitalize="off"
+                       name="Query Song"
+                       placeholder="Type your guess.."
+                       type="text">
+                <svg id="clear_button"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor"
+                     class="clear-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </form>
+            <br>
+            <br>
+            <p id="artistGuessInfo">Song Name:</p>
+            <form class="searchForm">
+                <svg id="searchIcon"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                </svg>
+                <input class="ryuji_button"
+                       autocomplete="off"
+                       autocapitalize="off"
+                       name="Query Song"
+                       placeholder="Type your guess.."
+                       type="text">
+                <svg id="clear_button"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="1.5"
+                     stroke="currentColor"
+                     class="clear-icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </form>
+            <audio id="audioExtract" hidden>
+                <source src="https://raw.githubusercontent.com/RiyujinD/final_project_cs50/master/static/audio/karmaPolice.mp3"
+                        type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        {% endblock %}

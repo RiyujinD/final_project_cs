@@ -1,67 +1,55 @@
 {% extends "layout.html" %}
-
 {% block title %}Spotify{% endblock %}
-
 {% block head %}
-
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/battle.css') }}">
-        <script src="{{ url_for('static', filename='js/battle.js') }}"></script>
-
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/battle.css') }}">
+    <script src="{{ url_for('static', filename='js/battle.js') }}"></script>
 {% endblock %}
-
 {% block main %}
-
-<div class="wrapper_titleDescription wrapper_titleDescription_two">
-        <h1 class="main_title"> ⚔️ Stream Battle: Guess the Top Track! ⚔️</h1>
-        <p class="game_description">Two songs, one winner. Guess which track is ruling the streaming charts! </p>
-      </div>
-  
-      <hr class="top_hr_wrapper">
-  
-  
-      <div class="container_videoBattle">
+    <div class="wrapper_titleDescription wrapper_titleDescription_two">
+        <h1 class="main_title">⚔️ Stream Battle: Guess the Top Track! ⚔️</h1>
+        <p class="game_description">Two songs, one winner. Guess which track is ruling the streaming charts!</p>
+    </div>
+    <hr class="top_hr_wrapper">
+    <div class="container_videoBattle">
         <div class="wrapper_videoBattle">
-  
-          <div class="video_item">
-    
-            <div class="video_index">A</div>
-  
-            <video class="videos" controls poster="{{ url_for('static', filename="images/BIG.jpg") }}">
-              <source src="{{ url_for('static', filename='videos/TheNotoriousBIG-Juicy.mp4') }}" type="video/mp4">
-              Your browser does not support the video tag. 
-            </video>
-  
-            <div class="video_description">
-  
-              <p class="metadata_songBattle">Juicy</p>
-              <p class="metadata_artistBattle">The Notorious B.I.G.</p>
+            <div class="video_item">
+                <div class="video_index">A</div>
+                <video class="videos"
+                       controls
+                       poster="{{ url_for('static', filename="images/BIG.jpg") }}">
+                    <source src="{{ url_for('static', filename='videos/TheNotoriousBIG-Juicy.mp4') }}"
+                            type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video_description">
+                    <p class="metadata_songBattle">Juicy</p>
+                    <p class="metadata_artistBattle">The Notorious B.I.G.</p>
+                </div>
             </div>
-          </div>
-  
-          <h1 class="vs_text">VS</h1>
-  
-          <div class="video_item">
-            <div class="video_index video_indexB">B</div>
-            <video class="videos" controls poster="{{ url_for('static', filename="images/2pac.jpg") }}">
-              <source src="{{ url_for('static', filename='videos/2Pac-HitEmUp.mp4') }}" type="video/mp4">
-              Your browser does not support the video tag. 
-            </video>
-  
-            <div class="video_description">
-              <p class="metadata_songBattle">Hit 'Em Up</p>
-              <p class="metadata_artistBattle">2Pac</p>
+            <h1 class="vs_text">VS</h1>
+            <div class="video_item">
+                <div class="video_index video_indexB">B</div>
+                <video class="videos"
+                       controls
+                       poster="{{ url_for('static', filename="images/2pac.jpg") }}">
+                    <source src="{{ url_for('static', filename='videos/2Pac-HitEmUp.mp4') }}"
+                            type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video_description">
+                    <p class="metadata_songBattle">Hit 'Em Up</p>
+                    <p class="metadata_artistBattle">2Pac</p>
+                </div>
             </div>
-          </div>
-  
-        </div> <!-- End of wrapper video battle -->
-  
-        <div id="containerSplitButtonNResult">
-          <div class="split-button">
-            <button class="half left">A</button>
-            <button class="half right">B</button>
-          </div>
         </div>
-        
-      </div> <!-- End of container video battle -->
-
+        <!-- End of wrapper video battle -->
+        <div id="containerSplitButtonNResult">
+            <div class="split-button">
+                <button class="half left">A</button>
+                <button class="half right">B</button>
+            </div>
+        </div>
+    </div>
+    <!-- End of container video battle -->
 {% endblock %}
