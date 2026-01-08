@@ -101,7 +101,6 @@ def insert_tracks(unique_items):
 
 
         # 1. Inserting albums
-        print("→ album rows to insert:", tuple_albums[0])
         db.executemany("""
             INSERT OR IGNORE INTO albums
                 (album_id, name, artists, cover_url, total_tracks)
@@ -111,7 +110,6 @@ def insert_tracks(unique_items):
 
 
         # 2. Then inserting tracks (depends on albums)
-        print("→ tracks row to insert:", tuples_tracks[0])
         db.executemany("""
             INSERT OR IGNORE INTO tracks
                 (track_id, name, artists, duration_ms, album_id, popularity)
@@ -120,7 +118,6 @@ def insert_tracks(unique_items):
         print("→TRACKS INSERT SUCCESFULLY")
 
         # 3. Inserting user_albums link (depends on albums and tracks)
-        print("→ user albumsrow to insert:", tuple_user_albums[0])
         if tuple_user_albums:
             db.executemany("""
                 INSERT OR IGNORE INTO user_albums
@@ -130,7 +127,6 @@ def insert_tracks(unique_items):
         print("USER ALBUM INSERT SUCCESFULLY")
         
         # 4. Insert playlists before user_playlists
-        print("→ playlist row to insert:", tuple_playlist[0])
         if tuple_playlist:
             db.executemany("""
                 INSERT OR IGNORE INTO playlists
@@ -140,7 +136,6 @@ def insert_tracks(unique_items):
         print("→PLAYLIST INSERT SUCCESFULLY")
 
         # 5. Now is ok to insert user_playlists         
-        print("→ user playlist row to insert:", tuple_user_playlists[0])
         if tuple_user_playlists:
             db.executemany("""
                 INSERT OR IGNORE INTO user_playlists
@@ -150,7 +145,6 @@ def insert_tracks(unique_items):
         print("→USER PLAYLIST INSERT SUCCESFULLY")
 
         # 6. Inserting user playlists track (depends on playlist and user_playlist)      
-        print("→ playlist user tracks rowS to insert:", tuple_user_playlist_tracks[0])
         if tuple_user_playlist_tracks:
             db.executemany("""
                 INSERT OR IGNORE INTO user_playlist_tracks
@@ -160,7 +154,6 @@ def insert_tracks(unique_items):
         print("→TRACK USER PLAYLIST INSERT SUCCESFULLY")
 
         # 6. Inserting user liked title (depend on tracks)
-        print("→ liked title user row to insert:", tuple_liked[0])
         if tuple_liked:
             db.executemany("""
                 INSERT OR IGNORE INTO user_likes
@@ -170,3 +163,60 @@ def insert_tracks(unique_items):
         print("LIKED TRACK FROM USER INSERT SUCCESFULLY")
 
 
+# Fetch from database track with parameters selected by user
+def get_customise_tracks(sources, amount):
+
+    amount = int(amount)
+    if not amount:
+        raise Exception("No amount found")
+    sources = sources # List of sources
+    if not sources:
+        raise Exception("No source found")
+    user_id = session["spotify_id"]
+    if not user_id:
+         raise Exception("No spotify user id found")
+    
+
+    print(f"THIS IS THE AMOUNT PASS IN :{amount}")
+
+    total = amount / int(len(sources))
+    
+    print(f" THIS IS THE TOTAL :{total}")
+    # param = []
+
+    # with link_db() as db:
+    #     if 'playlist' in sources:
+
+    #     if 'album' in sources:
+
+    #     if 'liked_title' in sources:
+
+
+
+
+def get_cover_by_track_name(track_name):
+    sql = """
+    SELECT a.cover_url
+      FROM tracks t
+      JOIN albums a ON t.album_id = a.album_id
+     WHERE t.name = ? COLLATE NOCASE
+    LIMIT 1;
+    """
+    with link_db() as db: 
+        row = db.execute(sql, (track_name.strip(),)).fetchone()
+        return row["cover_url"] if row else None
+
+    
+
+
+
+
+
+     
+
+
+
+    
+
+
+ 
