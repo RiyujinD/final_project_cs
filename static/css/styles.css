@@ -1,10 +1,10 @@
 /* Variable and preset to use around the all app */
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   --width_button: 90px;
   --height_button: 40px;
   --svg_size: 50px;
-  --spotifyColor: #1DB954;
+  --spotifyColor: #1db954;
   --niceBlue: rgba(0, 255, 255, 0.8);
   --text-secondary-dark: rgb(139, 148, 158);
   --text-secondary-light: rgb(71, 76, 80);
@@ -16,14 +16,26 @@
   --text-color: #f5f5f5;
   --text-secondary: var(--niceBlue);
   --hr-color: rgba(255, 255, 255, 0.5);
-  --box-shadow1: 0px 25px 20px -20px rgba(40, 197, 66, 0.45), 0 0 10px rgba(255, 255, 255, 0.2);
-  --box-shadowItem: inset 0px 0px 20px 8px rgba(0,0,0,0.74), inset 8px 5px 13px 2px rgba(255,255,255,0.2);
-  --box-shadowGlass: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.7), inset 0 2px 3px rgba(255, 255, 255, 1), inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
+  --box-shadow1:
+    0px 25px 20px -20px rgba(40, 197, 66, 0.45),
+    0 0 10px rgba(255, 255, 255, 0.2);
+  --box-shadowItem:
+    inset 0px 0px 20px 8px rgba(0, 0, 0, 0.74),
+    inset 8px 5px 13px 2px rgba(255, 255, 255, 0.2);
+  --box-shadowGlass:
+    0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.7),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
   --carrousel-boxShadow: none;
-  --border1: rgba(255, 255, 255, 0.5); 
+  --border1: rgba(255, 255, 255, 0.5);
 
   /* Theme toggle button */
-  --button-bg: linear-gradient(to bottom, hsl(240, 5%, 6%) 0%, hsl(240, 5%, 4%) 50%, hsl(240, 5%, 2%) 100%);
+  --button-bg: linear-gradient(
+    to bottom,
+    hsl(240, 5%, 6%) 0%,
+    hsl(240, 5%, 4%) 50%,
+    hsl(240, 5%, 2%) 100%
+  );
   --outline: 2px solid rgba(100, 0, 233, 0.6);
   --glow: drop-shadow(0px 0px 7px rgba(0, 255, 255, 0.8));
 
@@ -40,37 +52,38 @@
   --text-color: black;
   --text-secondary: var(--text-secondary-light);
   --hr-color: rgba(0, 0, 0, 0.5);
-  --box-shadow1: 13px 13px 10px -4px rgba(0, 0, 0, 0.4),
-                5px 3px 6px -2px rgba(0, 0, 0, 0.5),
-                inset 4px 15px 13px -14px rgba(255, 255, 255, 1),
-                0px 25px 25px -35px rgba(40, 197, 66, 0.575);
-
-  --border1: rgba(0, 0, 0, 0.5); 
-                
-
-  --box-shadow: 13px 13px 10px -4px rgba(0, 0, 0, 0.4),
-                5px 3px 6px -2px rgba(0, 0, 0, 0.5),
-                inset 4px 15px 13px -14px rgba(255, 255, 255, 1);
-  --box-shadowItem: 13px 13px 10px -4px rgba(0, 0, 0, 0.4),
-                    5px 3px 6px -2px rgba(0, 0, 0, 0.5),
-                    inset 4px 15px 13px -14px rgba(255, 255, 255, 1);
-
-    --box-shadowGlass: 13px 13px 10px -4px rgba(0, 0, 0, 0.4),
-    5px 3px 6px -2px rgba(0, 0, 0, 0.5),
+  --box-shadow1:
+    13px 13px 10px -4px rgba(0, 0, 0, 0.4), 5px 3px 6px -2px rgba(0, 0, 0, 0.5),
     inset 4px 15px 13px -14px rgba(255, 255, 255, 1),
     0px 25px 25px -35px rgba(40, 197, 66, 0.575);
 
+  --border1: rgba(0, 0, 0, 0.5);
 
+  --box-shadow:
+    13px 13px 10px -4px rgba(0, 0, 0, 0.4), 5px 3px 6px -2px rgba(0, 0, 0, 0.5),
+    inset 4px 15px 13px -14px rgba(255, 255, 255, 1);
+  --box-shadowItem:
+    13px 13px 10px -4px rgba(0, 0, 0, 0.4), 5px 3px 6px -2px rgba(0, 0, 0, 0.5),
+    inset 4px 15px 13px -14px rgba(255, 255, 255, 1);
+
+  --box-shadowGlass:
+    13px 13px 10px -4px rgba(0, 0, 0, 0.4), 5px 3px 6px -2px rgba(0, 0, 0, 0.5),
+    inset 4px 15px 13px -14px rgba(255, 255, 255, 1),
+    0px 25px 25px -35px rgba(40, 197, 66, 0.575);
 
   --carrousel-boxShadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  
+
   /* Theme toggle button */
   --button-bg: linear-gradient(to right, #222, #444);
   --outline: 2px solid hsla(204, 35%, 74%, 0.6);
   --glow: drop-shadow(0px 0px 7px rgba(0, 255, 0, 0.8));
 
   /*Glass box alike in index route */
-  --glass-color: linear-gradient(135deg, rgba(255, 253, 253, 0.24), rgba(255, 253, 253, 0.1));
+  --glass-color: linear-gradient(
+    135deg,
+    rgba(255, 253, 253, 0.24),
+    rgba(255, 253, 253, 0.1)
+  );
   --glass-textColor: rgba(0, 0, 0, 0.4);
   --search-iconColor: rgb(35, 136, 204);
   --search-iconFilter: drop-shadow(0px 0px 10px rgb(14, 156, 212));
@@ -89,7 +102,9 @@ html {
   scroll-behavior: smooth;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background 1s ease, color 1s ease;
+  transition:
+    background 1s ease,
+    color 1s ease;
 }
 
 body {
@@ -97,11 +112,11 @@ body {
 }
 
 hr {
-  margin-inline: auto; 
+  margin-inline: auto;
   width: 50%;
-  background-color: var(--hr-color); 
-  border: none; 
-  height: 0.1rem; 
+  background-color: var(--hr-color);
+  border: none;
+  height: 0.1rem;
   opacity: 0.1;
 }
 
@@ -109,11 +124,11 @@ hr {
 body::-webkit-scrollbar {
   width: 1rem;
 }
-  /* Change the color of the track */
+/* Change the color of the track */
 body::-webkit-scrollbar-track {
   background: #1e1e24;
 }
-  /* Change the thumb (scrollable part */
+/* Change the thumb (scrollable part */
 body::-webkit-scrollbar-thumb {
   background: rgba(116, 105, 105, 0.3);
   border-radius: 10px;
@@ -121,19 +136,18 @@ body::-webkit-scrollbar-thumb {
 
 /* Thinner scrollbar on smaller screen */
 @media (max-width: 600px) {
-  body::-webkit-scrollbar { 
-      width: 0.9rem;
+  body::-webkit-scrollbar {
+    width: 0.9rem;
   }
 }
-
 
 #navbar {
   position: sticky;
   top: 0;
   height: 6rem;
   width: 100%;
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   background: hsl(240, 5%, 4%);
 }
@@ -143,14 +157,24 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: auto;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: solid red;
+  /* visibility: hidden; */
 }
 
-.nav-left,
-.nav-right {
-  flex-shrink: 0;
-  min-width: 7%;
-  max-width: 7%;
+@media (max-width: 1600px) {
+  .nav-section {
+    padding-inline: none;
+  }
+}
+
+/* .nav-left, */
+/* .nav-right { */
+/*   flex-shrink: 0; */
+/*   min-width: 3%; */
+/*   max-width: 7%; */
 }
 
 .nav-logs {
@@ -182,19 +206,18 @@ i.nav-icon {
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1rem; 
+  font-size: 1rem;
   display: none;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-
 .navText-separator {
   height: 2.5rem;
   width: 1px;
-  color: #1DB954;
+  color: #1db954;
   background-color: var(--niceBlue);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .nav-right:hover .link-text {
@@ -211,7 +234,7 @@ i.nav-icon {
 }
 
 .nav-center p {
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .nav-text {
@@ -230,9 +253,7 @@ i.nav-icon {
   opacity: 1;
 }
 
-
-
-/* Night/light Mod button left side navbar*/  
+/* Night/light Mod button left side navbar*/
 input[type="checkbox"]#theme_toggle {
   opacity: 0; /* Removing the default check input */
   position: absolute;
@@ -243,15 +264,15 @@ input[type="checkbox"]#theme_toggle {
 /* label container */
 input[type="checkbox"]#theme_toggle + label {
   position: relative;
-  display: flex; 
+  display: flex;
   transform: scaleX(-1);
   filter: drop-shadow(0px 0px 6px rgba(0, 255, 255, 0.8));
-  transition: opacity .4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
 /* New checkbox styling */
 input[type="checkbox"]#theme_toggle + label::before {
-  content: '';
+  content: "";
   width: var(--width_button);
   height: var(--height_button);
   border-radius: calc(max(var(--height_button), var(--width_button)) / 2);
@@ -264,7 +285,6 @@ input[type="checkbox"]#theme_toggle + label:hover svg {
   filter: drop-shadow(0px 0px 8px rgba(0, 255, 255, 0.6));
 }
 
-
 /* SVG styling */
 label svg {
   height: var(--svg_size);
@@ -272,30 +292,43 @@ label svg {
   position: absolute;
   cursor: pointer;
   top: 50%;
-  filter: drop-shadow(.2px .2px 5px rgba(0, 120, 200, .5));
+  filter: drop-shadow(0.2px 0.2px 5px rgba(0, 120, 200, 0.5));
   transform: translateY(-50%);
   transition: transform 2s ease;
 }
 
 /* ANIMATIONS: dynamically add in js scripts/js depending on checkbox state */
 .offsetCheck {
-  transform: translate(calc(var(--width_button) - var(--svg_size)), -52%) rotate(360deg);    
+  transform: translate(calc(var(--width_button) - var(--svg_size)), -52%)
+    rotate(360deg);
 }
 
 .offsetUncheck {
-  transform: translate(0, -52%) rotate(-360deg);   
+  transform: translate(0, -52%) rotate(-360deg);
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .fadeOut {
@@ -307,18 +340,17 @@ label svg {
 }
 /* END OF ANIMATIONS */
 
-
-
-
 #navbar::after {
   content: "";
   position: absolute;
-  bottom: 0;               
-  left: 50%;              
+  bottom: 0;
+  left: 50%;
   width: 85%;
-  transform: translateX(-50%);             
-  height: 1px;           
+  transform: translateX(-50%);
+  height: 1px;
   background: var(--niceBlue);
-  transition: left 300ms ease, width 300ms ease;
-  opacity: .2;
+  transition:
+    left 300ms ease,
+    width 300ms ease;
+  opacity: 0.2;
 }

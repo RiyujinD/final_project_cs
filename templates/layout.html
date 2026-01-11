@@ -1,84 +1,144 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Montserrat font -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">    
-
-    <!-- Default js/css files-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-
-    {% block head %}
-    <!-- CSS / JS files for routes -->
-    {% endblock %}
-
-    <!-- Font-awsome logos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/napster-brands.png') }}">
-
-    <title>Final project cs50x {% block title %}{% endblock %}</title> 
-  </head>
-
-  <body>
-    <header>
-      <nav id="navbar">
-
-        <!-- left: theme toggle -->
-        <div class="nav-section nav-left">
-          <div class="theme-toggle">
-
-            <input type="checkbox" id="theme_toggle" aria-label="Toggle dark or light mode" />
-            <label for="theme_toggle" class="theme-label">
-                <!-- SVG Day made with Figma -->
-                <svg id="svg_day" fill="none" viewBox="0 0 334 334" xmlns="http://www.w3.org/2000/svg"><mask id="maskDay" x="0" y="0" width="334" height="334" style="mask-type:alpha" maskUnits="userSpaceOnUse"><path d="M334 167c0 92.232-74.768 167-167 167-92.232 0-167-74.768-167-167 0-92.232 74.768-167 167-167 92.232 0 167 74.768 167 167z" fill="#87CEFA"/></mask><g mask="url(#maskDay)"><path d="M334 167c0 92.232-74.768 167-167 167-92.232 0-167-74.768-167-167 0-92.232 74.768-167 167-167 92.232 0 167 74.768 167 167z" fill="#87CEFA"/><ellipse transform="rotate(-10.27 93.917 143.6)" cx="93.917" cy="143.6" rx="54.961" ry="60.779" fill="#FFBF00"/><ellipse transform="rotate(-10.27 93.278 143.35)" cx="93.278" cy="143.35" rx="52.204" ry="57.731" fill="#ff0"/><path d="M175.8 187.15c0.74 10.377-20.189 20.325-46.747 22.218-26.557 1.893-48.686-4.984-49.426-15.361s20.19-20.325 46.747-22.218c26.557-1.893 48.686 4.984 49.426 15.361z" fill="#fff"/><path d="M147.72 176.73c1.227 17.204-26.144 29.197-47.604 30.727-26.794-6.041-40.022-13.546-41.079-28.38-1.0576-14.834 15.522-10.883 47.605-30.728 21.46-1.53 39.852 11.177 41.078 28.381z" fill="#fff"/><path d="M143.29 183.95c-9.997-3.935-16.061-12.244-13.546-18.56 2.516-6.316 11.959-4.317 21.956-0.383 5.002 3.935 16.762 8.314 14.246 14.63-2.0 4.31-12.659 8.247-22.656 4.313z" fill="#fff" fill-opacity=".7"/><rect x="263" y="199" width="17" height="43" fill="#7B1113"/><path d="M272.58 144.8l36.963 65.011-76.257-1.382 39.294-63.629z" fill="#3B7A57"/><path d="M271.5 134L300.512 182.75H242.488L271.5 134z" fill="#3BAA57"/><path d="M271.5 122L290.986 155.75H252.014L271.5 122z" fill="#85BB65"/><ellipse cx="267" cy="223.5" rx="4" ry="4.5" fill="#000" fill-opacity=".8"/><path d="M-50 319.37c0 37.875 55.9 68.579 124.86 68.579 68.957 0 259.06-71.921 259.06-132.59 0-60.67-183.44 33.895-259.06-15.856-123.59-81.314-124.86 41.991-124.86 79.867z" fill="#0BDA51"/><path d="M178 120.12c0.75 0 2.812 1.325 3.083 1.128 1.098-0.798 1.694-2.937 2.293-4.098 1.139-2.206 2.368-3.421 4.099-5.151" stroke="#000" stroke-linecap="round" stroke-width="3"/><path d="M178.01 124.91c0.961-1.415 1.955-3.019 3.418-3.969 1.152-0.749 2.368-0.475 3.63-0.828 0.859-0.241 1.748-1.625 1.443-1.401-2.004 1.469-3.956 2.646-6.241 3.651-1.013 0.446 3.464-1.934 3.779-1.698 0.874 0.655-3.946 2.801-4.331 2.929-1.791 0.597 3.419-1.613 5.18-2.292 1.304-0.504 1.889-1.839 2.675-2.887" stroke="#000" stroke-linecap="round"/></g></svg>
-        
-                <!-- SVG Night -->
-                <svg id="svg_night" viewBox="0 0 12.7 12.7" xmlns="http://www.w3.org/2000/svg"><defs><clipPath clipPathUnits="userSpaceOnUse" id="a"><path d="M1.78 291.57c-1.83.17-3.3.92-3.49 2.16-.26 1.67 1.57 3.35 4.09 3.74a6 6 0 0 0 3.38-.38c.73.53 1.67.9 2.67 1.06 2.52.4 4.78-.63 5.04-2.3s-1.49-1.94-4.26-2.18c-2.76-.23-3.61-1.69-5.74-2.04a7 7 0 0 0-1.69-.06" fill="#666" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round"/></clipPath></defs><g transform="translate(0 -284.3)" stroke-linecap="round" stroke-linejoin="round"><circle cx="6.35" cy="290.65" r="6.35" fill="#728bb1"/><path clip-path="url(#a)" d="M12.7 290.65A6.35 6.35 0 0 1 6.35 297 6.35 6.35 0 0 1 0 290.65a6.35 6.35 0 0 1 6.35-6.35 6.35 6.35 0 0 1 6.35 6.35" fill="#666"/><g transform="translate(-9.15 -3.52)" fill="#374a68"><path d="M19.57 291.78a3 3 0 0 0-.47-.37 2.5 2.5 0 0 1-.37 3.05 2.5 2.5 0 0 1-3.04.36 3 3 0 0 0 .36.47 2.5 2.5 0 0 0 3.52 0 2.5 2.5 0 0 0 0-3.51"/><circle cx="11.32" cy="293.72" r=".3"/><circle cx="15.57" cy="290.22" r=".36"/><circle cx="17.17" cy="292.01" r=".23"/></g><g transform="translate(-9.33 -3.74)" fill="#fff"><path d="M19.57 291.78a3 3 0 0 0-.47-.37 2.5 2.5 0 0 1-.37 3.05 2.5 2.5 0 0 1-3.04.36 3 3 0 0 0 .36.47 2.5 2.5 0 0 0 3.52 0 2.5 2.5 0 0 0 0-3.51"/><circle cx="11.32" cy="293.72" r=".3"/><circle cx="15.57" cy="290.22" r=".36"/><circle cx="17.17" cy="292.01" r=".23"/></g></g></svg>
-            </label>
-
-          </div>
-        </div> <!-- End of left nav-section-->
-
-        <!-- center: nav links -->
-        <ul class="nav-section nav-center">
-          <li><a href="{{ url_for('index') }}" class="nav-text {% if request.endpoint == 'index' %}navText-active{% endif %}">Home</a></li>
-          <li><div class="navText-separator"></div></li>
-          <li><a href="{{ url_for('selection') }}" class="nav-text {% if request.endpoint == 'selection' %}navText-active{% endif %}">Mods</a></li>
-          <li><div class="navText-separator"></div></li>
-          <li><a href="{{ url_for('index') }}" class="nav-text {% if request.endpoint == 'about' %}navText-active{% endif %}">About</a></li>
-          <li><div class="navText-separator"></div></li>
-          <li><a href="{{ url_for('index') }}" class="nav-text {% if request.endpoint == 'help' %}navText-active{% endif %}">Help</a></li>
-        </ul> 
-
-        <!-- right: nav log icon -->
-        <div class="nav-section nav-right">
-          <a href="{{ url_for('logout' if session.get('is_authenticated') else 'login') }}" class="nav-logs" aria-label="{{ 'Log out' if session.get('is_authenticated') else 'Log in' }}">
-            
-            {% if session.get('is_authenticated') %}
-              <i class="fa-solid fa-user-ninja nav-icon"></i>
-              <span class="link-text">Logout</span>
-
-            {% else %}
-              <svg class="nav-icon"xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-              </svg>
-              <span class="link-text">Login</span>
-            {% endif %}
-
-          </a>
-        </div> <!-- End of right nav-section-->
-
-      </nav>
-    </header>  
-
-      <main>
-          {% block main %}{% endblock %}
-      </main>
-
-      <footer></footer>
-  </body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Google Montserrat font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+              rel="stylesheet">
+        <!-- Default js/css files-->
+        <link rel="stylesheet"
+              href="{{ url_for('static', filename='css/styles.css') }}">
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+        {% block head %}<!-- CSS / JS files for routes -->{% endblock %}
+        <!-- Font-awsome logos -->
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+              integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer" />
+        <link rel="icon"
+              type="image/png"
+              href="{{ url_for('static', filename='images/napster-brands.png') }}">
+        <title>Final project cs50x
+            {% block title %}{% endblock %}
+        </title>
+    </head>
+    <body>
+        <header>
+            <nav id="navbar">
+                <!-- left: theme toggle -->
+                <div class="nav-section nav-left">
+                    <div class="theme-toggle">
+                        <input type="checkbox"
+                               id="theme_toggle"
+                               aria-label="Toggle dark or light mode" />
+                        <label for="theme_toggle" class="theme-label">
+                            <!-- SVG Day made with Figma -->
+                            <svg id="svg_day"
+                                 fill="none"
+                                 viewBox="0 0 334 334"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <mask id="maskDay" x="0" y="0" width="334" height="334" style="mask-type:alpha" maskUnits="userSpaceOnUse">
+                                <path d="M334 167c0 92.232-74.768 167-167 167-92.232 0-167-74.768-167-167 0-92.232 74.768-167 167-167 92.232 0 167 74.768 167 167z" fill="#87CEFA" />
+                                </mask>
+                                <g mask="url(#maskDay)">
+                                <path d="M334 167c0 92.232-74.768 167-167 167-92.232 0-167-74.768-167-167 0-92.232 74.768-167 167-167 92.232 0 167 74.768 167 167z" fill="#87CEFA" />
+                                <ellipse transform="rotate(-10.27 93.917 143.6)" cx="93.917" cy="143.6" rx="54.961" ry="60.779" fill="#FFBF00" /><ellipse transform="rotate(-10.27 93.278 143.35)" cx="93.278" cy="143.35" rx="52.204" ry="57.731" fill="#ff0" />
+                                <path d="M175.8 187.15c0.74 10.377-20.189 20.325-46.747 22.218-26.557 1.893-48.686-4.984-49.426-15.361s20.19-20.325 46.747-22.218c26.557-1.893 48.686 4.984 49.426 15.361z" fill="#fff" />
+                                <path d="M147.72 176.73c1.227 17.204-26.144 29.197-47.604 30.727-26.794-6.041-40.022-13.546-41.079-28.38-1.0576-14.834 15.522-10.883 47.605-30.728 21.46-1.53 39.852 11.177 41.078 28.381z" fill="#fff" />
+                                <path d="M143.29 183.95c-9.997-3.935-16.061-12.244-13.546-18.56 2.516-6.316 11.959-4.317 21.956-0.383 5.002 3.935 16.762 8.314 14.246 14.63-2.0 4.31-12.659 8.247-22.656 4.313z" fill="#fff" fill-opacity=".7" />
+                                <rect x="263" y="199" width="17" height="43" fill="#7B1113" />
+                                <path d="M272.58 144.8l36.963 65.011-76.257-1.382 39.294-63.629z" fill="#3B7A57" />
+                                <path d="M271.5 134L300.512 182.75H242.488L271.5 134z" fill="#3BAA57" />
+                                <path d="M271.5 122L290.986 155.75H252.014L271.5 122z" fill="#85BB65" />
+                                <ellipse cx="267" cy="223.5" rx="4" ry="4.5" fill="#000" fill-opacity=".8" />
+                                <path d="M-50 319.37c0 37.875 55.9 68.579 124.86 68.579 68.957 0 259.06-71.921 259.06-132.59 0-60.67-183.44 33.895-259.06-15.856-123.59-81.314-124.86 41.991-124.86 79.867z" fill="#0BDA51" />
+                                <path d="M178 120.12c0.75 0 2.812 1.325 3.083 1.128 1.098-0.798 1.694-2.937 2.293-4.098 1.139-2.206 2.368-3.421 4.099-5.151" stroke="#000" stroke-linecap="round" stroke-width="3" />
+                                <path d="M178.01 124.91c0.961-1.415 1.955-3.019 3.418-3.969 1.152-0.749 2.368-0.475 3.63-0.828 0.859-0.241 1.748-1.625 1.443-1.401-2.004 1.469-3.956 2.646-6.241 3.651-1.013 0.446 3.464-1.934 3.779-1.698 0.874 0.655-3.946 2.801-4.331 2.929-1.791 0.597 3.419-1.613 5.18-2.292 1.304-0.504 1.889-1.839 2.675-2.887" stroke="#000" stroke-linecap="round" />
+                                </g>
+                            </svg>
+                            <!-- SVG Night -->
+                            <svg id="svg_night"
+                                 viewBox="0 0 12.7 12.7"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <defs><clipPath clipPathUnits="userSpaceOnUse" id="a">
+                                <path d="M1.78 291.57c-1.83.17-3.3.92-3.49 2.16-.26 1.67 1.57 3.35 4.09 3.74a6 6 0 0 0 3.38-.38c.73.53 1.67.9 2.67 1.06 2.52.4 4.78-.63 5.04-2.3s-1.49-1.94-4.26-2.18c-2.76-.23-3.61-1.69-5.74-2.04a7 7 0 0 0-1.69-.06" fill="#666" stroke-width="2.12" stroke-linecap="round" stroke-linejoin="round" />
+                                </clipPath></defs>
+                                <g transform="translate(0 -284.3)" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="6.35" cy="290.65" r="6.35" fill="#728bb1" />
+                                <path clip-path="url(#a)" d="M12.7 290.65A6.35 6.35 0 0 1 6.35 297 6.35 6.35 0 0 1 0 290.65a6.35 6.35 0 0 1 6.35-6.35 6.35 6.35 0 0 1 6.35 6.35" fill="#666" />
+                                <g transform="translate(-9.15 -3.52)" fill="#374a68">
+                                <path d="M19.57 291.78a3 3 0 0 0-.47-.37 2.5 2.5 0 0 1-.37 3.05 2.5 2.5 0 0 1-3.04.36 3 3 0 0 0 .36.47 2.5 2.5 0 0 0 3.52 0 2.5 2.5 0 0 0 0-3.51" />
+                                <circle cx="11.32" cy="293.72" r=".3" /><circle cx="15.57" cy="290.22" r=".36" /><circle cx="17.17" cy="292.01" r=".23" />
+                                </g>
+                                <g transform="translate(-9.33 -3.74)" fill="#fff">
+                                <path d="M19.57 291.78a3 3 0 0 0-.47-.37 2.5 2.5 0 0 1-.37 3.05 2.5 2.5 0 0 1-3.04.36 3 3 0 0 0 .36.47 2.5 2.5 0 0 0 3.52 0 2.5 2.5 0 0 0 0-3.51" />
+                                <circle cx="11.32" cy="293.72" r=".3" /><circle cx="15.57" cy="290.22" r=".36" /><circle cx="17.17" cy="292.01" r=".23" />
+                                </g>
+                                </g>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+                <!-- End of left nav-section-->
+                <!-- center: nav links -->
+                <ul class="nav-section nav-center">
+                    <li>
+                        <a href="{{ url_for("index") }}"
+                           class="nav-text {% if request.endpoint == 'index' %}navText-active{% endif %}">Home</a>
+                    </li>
+                    <li>
+                        <div class="navText-separator"></div>
+                    </li>
+                    <li>
+                        <a href="{{ url_for("selection") }}"
+                           class="nav-text {% if request.endpoint == 'selection' %}navText-active{% endif %}">Mods</a>
+                    </li>
+                    <li>
+                        <div class="navText-separator"></div>
+                    </li>
+                    <li>
+                        <a href="{{ url_for("index") }}"
+                           class="nav-text {% if request.endpoint == 'about' %}navText-active{% endif %}">About</a>
+                    </li>
+                    <li>
+                        <div class="navText-separator"></div>
+                    </li>
+                    <li>
+                        <a href="{{ url_for("index") }}"
+                           class="nav-text {% if request.endpoint == 'help' %}navText-active{% endif %}">Help</a>
+                    </li>
+                </ul>
+                <!-- right: nav log icon -->
+                <div class="nav-section nav-right">
+                    <a href="{{ url_for('logout' if session.get('is_authenticated') else 'login') }}"
+                       class="nav-logs"
+                       aria-label="{{ 'Log out' if session.get("is_authenticated") else 'Log in' }}">
+                        {% if session.get('is_authenticated') %}
+                            <i class="fa-solid fa-user-ninja nav-icon"></i>
+                            <span class="link-text">Logout</span>
+                        {% else %}
+                            <svg class="nav-icon"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 fill="none"
+                                 viewBox="0 0 24 24"
+                                 stroke-width="1.5"
+                                 stroke="currentColor"
+                                 class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                            <span class="link-text">Login</span>
+                        {% endif %}
+                    </a>
+                </div>
+                <!-- End of right nav-section-->
+            </nav>
+        </header>
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+        <footer>
+        </footer>
+    </body>
+    </lhtml>

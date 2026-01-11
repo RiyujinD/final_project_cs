@@ -1,5 +1,3 @@
-
-
 .top_hr_wrapper {
   margin-top: 2rem;
   margin-bottom: 7rem;
@@ -42,11 +40,11 @@
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  -webkit-overflow-scrolling: touch; 
+  -webkit-overflow-scrolling: touch;
 }
 
 #slider::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 
 #carrousel #slider img {
@@ -54,7 +52,7 @@
   height: 100%;
   width: auto;
   object-fit: cover;
-  -webkit-tap-highlight-color: rgba(0, 0, 255, 0.3); 
+  -webkit-tap-highlight-color: rgba(0, 0, 255, 0.3);
   transition: all 1s ease;
 }
 
@@ -66,14 +64,14 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 #slider-nav .nav-link {
   flex: 0 0 auto;
   color: var(--bg-color);
-  width: .7rem;
-  height: .7rem;
+  width: 0.7rem;
+  height: 0.7rem;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.75;
@@ -86,30 +84,42 @@
 
 #slider-nav .nav-link.active {
   background-color: black;
-  opacity: 1; 
-} 
+  opacity: 1;
+}
 
 #container_glass_box {
-  position: absolute; 
+  position: absolute;
   left: 50%;
-  top: 90%; 
-  transform: translate(-50%, -40%); 
-  width: 30rem; 
+  top: 90%;
+  transform: translate(-50%, -40%);
+  width: 30rem;
   max-width: 35rem;
   border: 1px solid rgba(0, 0, 0, 0.4);
   background: var(--glass-color);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
-  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.7), inset 0 2px 3px rgba(255, 255, 255, 1), inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
-  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.7), inset 0 2px 3px rgba(255, 255, 255, 1), inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 0px rgba(0, 0, 0, 0.7), inset 0 2px 3px rgba(255, 255, 255, 1), inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
-  z-index: 100; 
+  -webkit-box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 1px 0px rgba(0, 0, 0, 0.7),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
+  -moz-box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 1px 0px rgba(0, 0, 0, 0.7),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    0 1px 0px rgba(0, 0, 0, 0.7),
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
+  z-index: 100;
 }
 
 #container_glass_box > h1 {
-  font-size: 2rem; 
-  font-weight: bold; 
+  font-size: 2rem;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   padding: 3rem;
@@ -121,7 +131,7 @@
   #container_glass_box {
     width: 65%;
   }
-  
+
   #container_glass_box > h1 {
     font-size: 1.5rem;
     line-height: 3rem;
@@ -180,7 +190,6 @@ top: 50%;
 transform: translate(100%, -50%);
 }  */
 
-
 .wrapper_titleDescription .main_title > span#blur_text {
   filter: blur(5px);
   -webkit-filter: blur(5px);
@@ -194,7 +203,7 @@ transform: translate(100%, -50%);
   max-width: 600px;
   margin-top: 3rem;
   color: var(--text-secondary);
-  opacity: .8;
+  opacity: 0.8;
   font-size: 20px;
   font-weight: 455;
   line-height: 27px;
@@ -205,15 +214,15 @@ transform: translate(100%, -50%);
   .wrapper_titleDescription {
     padding-top: 10rem;
   }
-  
+
   h1.main_title {
     font-size: 3rem;
   }
-  
+
   .game_description {
     width: 85%;
   }
-  
+
   .main_title > span#blur_text {
     filter: blur(4px);
     -webkit-filter: blur(4px);
@@ -221,20 +230,18 @@ transform: translate(100%, -50%);
 }
 
 @media (max-width: 400px) {
-  
   .wrapper_titleDescription {
     padding-top: 9rem;
   }
-  
+
   h1.main_title {
     font-size: 2.5rem;
   }
-  
+
   .game_description {
     margin-top: 2.3rem;
   }
 }
-
 
 .containerGrid.grid_component {
   --cardWidth: 4rem;
@@ -244,7 +251,7 @@ transform: translate(100%, -50%);
   --card3Height: 30rem;
   --cardPadding: 1rem;
   --iconSize: 2.5rem;
-  --spotifyColor: #1DB954;
+  --spotifyColor: #1db954;
 }
 
 /* =====================================================
@@ -286,7 +293,11 @@ transform: translate(100%, -50%);
   -webkit-box-shadow: var(--box-shadow1), var(--box-shadowGlass);
   -moz-box-shadow: var(--box-shadow1), var(--box-shadowGlass);
   box-shadow: var(--box-shadow1), var(--box-shadowGlass);
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out, width 0.6s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition:
+    transform 0.6s ease-in-out,
+    opacity 0.6s ease-in-out,
+    width 0.6s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
 
 .containerCard_col1 .card:hover {
@@ -302,15 +313,15 @@ transform: translate(100%, -50%);
 /* Card backgrounds & heights */
 .containerCard_col1 .card:nth-of-type(1) {
   height: var(--card1Height);
-  background-image: url('https://images.unsplash.com/photo-1511138743687-5c14e8cfcf47?q=80&w=1974&auto=format&fit=crop');
+  background-image: url("https://images.unsplash.com/photo-1511138743687-5c14e8cfcf47?q=80&w=1974&auto=format&fit=crop");
 }
 .containerCard_col1 .card:nth-of-type(2) {
   height: var(--card2Height);
-  background-image: url('https://images.unsplash.com/photo-1726142346170-080f90c96df0?q=80&w=1935&auto=format&fit=crop');
+  background-image: url("https://images.unsplash.com/photo-1726142346170-080f90c96df0?q=80&w=1935&auto=format&fit=crop");
 }
 .containerCard_col1 .card:nth-of-type(3) {
   height: var(--card3Height);
-  background-image: url('https://images.unsplash.com/photo-1660808059821-cd1abacc2371?q=80&w=1974&auto=format&fit=crop');
+  background-image: url("https://images.unsplash.com/photo-1660808059821-cd1abacc2371?q=80&w=1974&auto=format&fit=crop");
 }
 
 /* Row inside each card */
@@ -334,7 +345,9 @@ transform: translate(100%, -50%);
   border-radius: 50%;
   aspect-ratio: 1;
   top: 1.5rem;
-  left: calc((var(--cardWidth) - var(--cardPadding) * 2) / 2 - var(--iconSize) / 2);
+  left: calc(
+    (var(--cardWidth) - var(--cardPadding) * 2) / 2 - var(--iconSize) / 2
+  );
 }
 
 /* Expanded and icon:hover state */
@@ -363,7 +376,9 @@ transform: translate(100%, -50%);
   opacity: 0;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   transform: translateY(25rem);
-  transition: opacity 0.7s ease-in, transform 0.5s ease-in-out;
+  transition:
+    opacity 0.7s ease-in,
+    transform 0.5s ease-in-out;
 }
 
 /* Show description in expanded card */
@@ -395,7 +410,7 @@ transform: translate(100%, -50%);
   .containerGrid {
     grid-template-columns: 1fr;
   }
-  
+
   .containerCard_col1 {
     align-items: flex-end;
     justify-content: flex-start;
@@ -411,7 +426,7 @@ transform: translate(100%, -50%);
   .containerGrid {
     padding: 0;
   }
-  
+
   .containerCard_col1 .card.expanded {
     width: 25rem;
   }
@@ -421,7 +436,7 @@ transform: translate(100%, -50%);
   .containerCard_col1 {
     height: 15rem;
   }
-  
+
   .containerCard_col1 .card:nth-of-type(1) {
     height: 60%;
   }
@@ -431,27 +446,27 @@ transform: translate(100%, -50%);
   .containerCard_col1 .card:nth-of-type(3) {
     height: 100%;
   }
-  
+
   .containerCard_col1 .card {
     width: 3rem;
     margin: 0 0.5rem;
     padding: calc(var(--cardPadding) * 0.1);
   }
-  
+
   .containerCard_col1 .card.expanded {
     width: 13rem;
   }
-  
+
   .containerCard_col1 .card .row .icon {
     width: 2rem;
     height: 2rem;
     left: 0.4rem;
   }
-  
+
   .containerCard_col1 .card .row .description h4 {
     font-size: 1.1rem;
   }
-  
+
   .containerCard_col1 .card .row .description p {
     font-size: 1rem;
     padding-top: 0.2rem;
@@ -467,7 +482,7 @@ transform: translate(100%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
   width: auto;
   height: auto;
   padding-top: 17rem;
@@ -492,7 +507,7 @@ transform: translate(100%, -50%);
   width: auto;
   border: 3px solid white;
   background-color: #19af4e;
-  z-index: 100; 
+  z-index: 100;
   border-radius: 1rem;
   padding: 1rem;
   font-size: 2.7rem;
@@ -515,7 +530,7 @@ transform: translate(100%, -50%);
 }
 
 .descriptionNumber::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   left: 0%;
@@ -529,7 +544,6 @@ transform: translate(100%, -50%);
    Media Queries for COL 2
 --------------------------------------------- */
 @media (max-width: 1600px) {
-
   .cardInfo_col2 {
     box-sizing: content-box;
     padding: 0;
@@ -537,9 +551,8 @@ transform: translate(100%, -50%);
     margin-top: 10rem;
     justify-content: center;
     align-items: center;
-
   }
-  
+
   .cardInfo_col2 .infoItem {
     font-size: 3rem;
     width: 30rem;
@@ -548,9 +561,7 @@ transform: translate(100%, -50%);
   }
 }
 
-
 @media (max-width: 700px) {
-
   .cardInfo_col2 .infoItem {
     width: 20rem;
   }
@@ -580,7 +591,7 @@ transform: translate(100%, -50%);
   hr {
     margin-block: 2rem;
   }
-  
+
   .bot_hr_wrapper_1fr {
     margin-top: 10rem;
   }
@@ -648,17 +659,16 @@ transform: translate(100%, -50%);
 }
 
 @media screen and (max-width: 820px) {
-  
-  .wrapper_videoBattle{
+  .wrapper_videoBattle {
     flex-direction: column;
   }
-  
+
   .vs_text {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-5deg);
   }
-  
+
   .videos {
     width: 340px;
     height: 300px;
@@ -678,25 +688,25 @@ transform: translate(100%, -50%);
 .metadata_artistBattle {
   margin-top: 0.5rem;
   font-size: 1.2rem;
-  color: var(--text-secondary); 
+  color: var(--text-secondary);
 }
 
 .metadata_songBattle {
   padding-top: 0.7rem;
   font-weight: bold;
-  font-size: 1.8rem; 
+  font-size: 1.8rem;
 }
 
 .video_item {
   position: relative;
-  width: 100%; 
+  width: 100%;
   height: auto;
 }
 
 .video_index {
   position: absolute;
   top: 1rem;
-  left: 1rem;  
+  left: 1rem;
   height: 3rem;
   width: 3rem;
   text-align: center;
@@ -716,7 +726,6 @@ transform: translate(100%, -50%);
   justify-content: center;
   height: 20rem;
   flex-direction: column;
-
 }
 
 .split-button {
@@ -726,9 +735,15 @@ transform: translate(100%, -50%);
   height: 6rem;
   border: 2px solid black;
   border-radius: 5rem;
-  -webkit-box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.2), var(--box-shadowItem);
-  -moz-box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.2), var(--box-shadowItem);
-  box-shadow: 1px 2px 5px rgba(255, 255, 255, 0.2), var(--box-shadowItem);
+  -webkit-box-shadow:
+    1px 2px 5px rgba(255, 255, 255, 0.2),
+    var(--box-shadowItem);
+  -moz-box-shadow:
+    1px 2px 5px rgba(255, 255, 255, 0.2),
+    var(--box-shadowItem);
+  box-shadow:
+    1px 2px 5px rgba(255, 255, 255, 0.2),
+    var(--box-shadowItem);
 }
 
 .half {
@@ -753,7 +768,8 @@ transform: translate(100%, -50%);
   background: hsla(240, 5%, 20%, 0.8);
 }
 
-.Aclicked, .Bclicked {
+.Aclicked,
+.Bclicked {
   text-align: center;
   margin-top: 4rem;
   font-size: 1.7rem;
@@ -774,7 +790,7 @@ transform: translate(100%, -50%);
 }
 
 .Aclicked::after {
-  content: 'The Notorious B.I.G. - Juicy 🎉';
+  content: "The Notorious B.I.G. - Juicy 🎉";
   color: var(--text-secondary);
   font-size: 1.5rem;
 }
@@ -785,12 +801,12 @@ transform: translate(100%, -50%);
     width: 20rem;
     height: 4rem;
   }
-  
+
   .left {
     border-top-left-radius: 4rem;
     border-bottom-left-radius: 4rem;
   }
-  
+
   .right {
     border-top-right-radius: 4rem;
     border-bottom-right-radius: 4rem;
@@ -814,15 +830,21 @@ transform: translate(100%, -50%);
 
 #container_songGuessing #mediaContainer #coverSongGuessing {
   position: relative;
-  -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
-  0 0 30px rgba(255, 255, 255, 0.2), var(--box-shadow1);
-  -moz-box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
-  0 0 30px rgba(255, 255, 255, 0.2), var(--box-shadow1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
-  0 0 30px rgba(255, 255, 255, 0.2), var(--box-shadow1);
+  -webkit-box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    var(--box-shadow1);
+  -moz-box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    var(--box-shadow1);
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    var(--box-shadow1);
   width: 100%;
   height: 100%;
-  background-image: url('https://raw.githubusercontent.com/RiyujinD/final_project_cs50/master/static/images/radiohead2.jpg');
+  background-image: url("https://raw.githubusercontent.com/RiyujinD/final_project_cs50/master/static/images/radiohead2.jpg");
   background-size: cover;
   background-position: center;
   background-color: transparent;
@@ -833,42 +855,43 @@ transform: translate(100%, -50%);
   z-index: 10;
 }
 
+/* reflection effect */
 #coverSongGuessing::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: 160%; 
+  top: 160%;
   left: 0;
   height: inherit;
   width: inherit;
-  transform: scaleY(-0.6); 
+  transform: scaleY(-0.6);
   transform-origin: top;
   background-image: inherit;
-  background-size: inherit; 
+  background-size: inherit;
   background-position: inherit;
   filter: blur(3px) brightness(0.8);
   -webkit-filter: blur(3px) brightness(0.8);
   isolation: inherit;
   mask-image: linear-gradient(
-  to top,
-  rgba(0, 0, 0, 0.8) 0%,
-  rgba(0, 0, 0, 0.6) 30%,
-  rgba(0, 0, 0, 0.1) 60%,
-  rgba(0, 0, 0, 0.0) 100%
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-image: linear-gradient(
-  to top,
-  rgba(0, 0, 0, 1) 0%,
-  rgba(0, 0, 0, 0.6) 30%,
-  rgba(0, 0, 0, 0.3) 60%,
-  rgba(0, 0, 0, 0.0) 100%
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
   mix-blend-mode: multiply;
 }
 
 #container_songGuessing #mediaContainer #coverSongGuessing .metadata_wrapper {
-  font-family: 'Montserrat', sans-serif;
-  display: none;           
-  flex-direction: column; 
+  font-family: "Montserrat", sans-serif;
+  display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -890,21 +913,21 @@ transform: translate(100%, -50%);
   filter: none;
 }
 .metadata_wrapper .metadata_songTitle {
-  font-size: 2rem; 
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 .metadata_wrapper .metadata_artist {
-  font-size: 1.3rem; 
-  margin-top: .5rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 #container_songGuessing #mediaContainer #songGuessing_pp {
   position: absolute;
-  top: 50%;        
-  left: 64%;       
-  transform: translate(-0%, -50%);  
-  width: 21.9rem;  
+  top: 50%;
+  left: 64%;
+  transform: translate(-0%, -50%);
+  width: 21.9rem;
   height: 21.9rem;
   border-radius: 50%;
   z-index: 1;
@@ -934,13 +957,13 @@ transform: translate(100%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 7rem; 
+  height: 7rem;
   width: 7rem;
   border-radius: 50%;
   background-color: hsl(240, 5%, 4%);
-  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1); 
-  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1); 
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1); 
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
   outline: 3px solid var(--niceBlue);
   cursor: pointer;
   z-index: 1000;
@@ -952,7 +975,6 @@ transform: translate(100%, -50%);
   color: var(--niceBlue);
   background-color: transparent;
   z-index: 100;
-  
 }
 
 #svg-container.hover_state {
@@ -962,7 +984,6 @@ transform: translate(100%, -50%);
 #svg-container:hover {
   animation: pulse 1s ease-in-out infinite;
 }
-
 
 @keyframes pulse {
   0% {
@@ -985,14 +1006,12 @@ transform: translate(100%, -50%);
   align-items: flex-start;
 }
 
-
 #container_songGuessing #wrapper_infoAndForm p#artistGuessInfo {
   font-size: 1.5rem;
   letter-spacing: 0.4rem;
   padding: 0.7rem;
   color: var(--text-secondary);
 }
-
 
 #container_songGuessing #wrapper_infoAndForm .searchForm {
   position: relative;
@@ -1029,8 +1048,8 @@ transform: translate(100%, -50%);
   outline: 0.155rem solid hsla(0, 100%, 50%, 1); /* Red */
 }
 
-
-#searchIcon, #clear_button {
+#searchIcon,
+#clear_button {
   position: absolute;
   box-sizing: content-box;
   width: 1.5rem;
@@ -1039,7 +1058,9 @@ transform: translate(100%, -50%);
   color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   /*   color: var(--glass-textColor, rgba(255, 255, 255, 0.3)); */
-  transition: color 0.2s, filter 0.2s;
+  transition:
+    color 0.2s,
+    filter 0.2s;
 }
 
 #searchIcon {
@@ -1056,36 +1077,34 @@ transform: translate(100%, -50%);
 }
 
 .searchForm:focus-within #clear_button {
-  color: rgba(255, 255, 255, 0.7); 
+  color: rgba(255, 255, 255, 0.7);
 }
-
-
 
 @media screen and (max-width: 1300px) {
   #container_songGuessing {
     gap: 17rem;
   }
-  
+
   #container_songGuessing #mediaContainer {
     width: 15rem;
     height: 15rem;
   }
-  
-  #container_songGuessing #mediaContainer #songGuessing_pp {    
-    width: 15.5rem;  
+
+  #container_songGuessing #mediaContainer #songGuessing_pp {
+    width: 15.5rem;
     height: 15.5rem;
   }
-  
+
   #container_songGuessing #wrapper_infoAndForm .searchForm {
     width: 21.5rem;
   }
-  
+
   #container_songGuessing #mediaContainer #songGuessing_pp #svg-container {
-    height: 2.8rem; 
+    height: 2.8rem;
     width: 2.8rem;
-    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1); 
-    -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1); 
-    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1); 
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
   }
 }
 
@@ -1096,47 +1115,46 @@ transform: translate(100%, -50%);
     justify-content: start;
     gap: 10rem;
   }
-  
+
   #container_songGuessing #mediaContainer {
     width: 15rem;
     height: 15rem;
     margin-left: 3rem;
   }
-  
-  #container_songGuessing #mediaContainer #songGuessing_pp {     
-    width: 15.5rem;  
+
+  #container_songGuessing #mediaContainer #songGuessing_pp {
+    width: 15.5rem;
     height: 15.5rem;
   }
-  
+
   #container_songGuessing #wrapper_infoAndForm {
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  
+
   #container_songGuessing #wrapper_infoAndForm .searchForm {
     width: 70%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  
   #container_songGuessing #mediaContainer {
     width: 12rem;
     height: 12rem;
   }
-  
-  #container_songGuessing #mediaContainer #songGuessing_pp {    
-    width: 12.5rem;  
+
+  #container_songGuessing #mediaContainer #songGuessing_pp {
+    width: 12.5rem;
     height: 12.5rem;
   }
-  
+
   #container_songGuessing #mediaContainer #songGuessing_pp #svg-container {
-    height: 2.4rem; 
+    height: 2.4rem;
     width: 2.4rem;
-    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1); 
-    -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1); 
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1); 
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1);
   }
 }
 
@@ -1151,7 +1169,6 @@ transform: translate(100%, -50%);
   white-space: nowrap;
 }
 
-
 .failResultAG {
   color: rgba(211, 108, 104, 0.5);
 }
@@ -1160,8 +1177,7 @@ transform: translate(100%, -50%);
   color: var(--spotifyColor);
 }
 
-
-.btn_callToAction { 
+.btn_callToAction {
   position: absolute;
   left: 50%;
   top: 100%;
@@ -1187,7 +1203,6 @@ transform: translate(100%, -50%);
 
 .btn_callToAction:hover {
   background: rgba(var(--glass-color), 0.1);
-  
 }
 
 #comingSoon1 {
@@ -1197,12 +1212,8 @@ transform: translate(100%, -50%);
   text-transform: uppercase;
   color: var(--text-color);
   padding: 1rem;
-  opacity: .4;
+  opacity: 0.4;
 }
-
-
-
-
 
 /* .register_link_bot {
 display: flex;
@@ -1225,7 +1236,6 @@ color: var(--spotifyColor);
 opacity: 1 !important;
 } */
 
-
 /* #playlist_image {
 max-width: 480px;
 height: auto;
@@ -1233,3 +1243,4 @@ display: flex;
 justify-content: center;
 object-fit: cover;
 }  */
+

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block title %}Spotify{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/game_parameter.css') }}">
+    <script src="{{ url_for('static', filename='js/game_parameter.js') }}"></script>
+{% endblock %}
+{% block main %}
+
+    <h1 id="paramTitle">
+        ⭐ <span style="color: #0DB954">Game </span>settings ⭐
+    </h1>
+    
+    <div id="modTitle">
+        <p>{{ mode | replace('_', ' ') }}</p>
+    </div>
+
+    <div class="wrapper">
+        <form method="get" action="{{ url_for("play") }}">
+            <!-- Name of mod choose in prev endpoint -->
+            <input type="hidden" name="m" value="{{ mode }}">
+            <input type="hidden" name="vM" value="{{ validMods|join(",") }}">
+            <div id="contentOption">
+                <p id="infoCategory">Select one or more music category:</p>
+                <input id="playlistInput" type="checkbox" name="c" value="playlist">
+                <label for="playlistInput" class="visiblePart">
+                    <p>Playlists</p>
+                </label>
+                <input id="albumInput" type="checkbox" name="c" value="album">
+                <label for="albumInput" class="visiblePart">
+                    <p>Albums</p>
+                </label>
+                <input id="likedTitleInput" type="checkbox" name="c" value="liked_title">
+                <label for="likedTitleInput" class="visiblePart">
+                    <p>Liked Titles</p>
+                </label>
+                <div id="totalOption">
+                    <p>Choose amount of tracks to play with:</p>
+                    <div class="radio-grid">
+                        <input type="radio" id="t10" name="t" value="10" checked>
+                        <label for="t10" class="box">10</label>
+                        <input type="radio" id="t25" name="t" value="25">
+                        <label for="t25" class="box">25</label>
+                        <input type="radio" id="t50" name="t" value="50">
+                        <label for="t50" class="box">50</label>
+                        <input type="radio" id="t0" name="t" value="0">
+                        <label for="t0" class="box">All</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" id="submit">Start Game ➔</button>
+        </form>
+    </div>
+{% endblock %}

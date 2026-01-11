@@ -205,7 +205,7 @@ def selection():
     total_likedTracks = session["total_liked_tracks"]
 
     return render_template(
-        "selection.html",
+        "game_selection.html",
         profile=profileUser,
         totalPlaylists=total_playlists,
         total_likedSongs=total_likedTracks,
@@ -214,7 +214,7 @@ def selection():
     )
 
 
-# Dynamic url pass in selection.jinja
+# Dynamic url pass in game_selection.html
 @app.route("/selection/<mode>")
 @login_required
 def selection_mode(mode):
@@ -224,7 +224,7 @@ def selection_mode(mode):
         flash("Incorrect mode passed")
         return redirect(url_for("index"))
 
-    return render_template("parameter.html", mode=mode, validMods=valid_mods)
+    return render_template("game_parameter.html", mode=mode, validMods=valid_mods)
 
 
 @app.route("/selection/play")
