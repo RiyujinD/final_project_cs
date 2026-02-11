@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 main {
-  --labelWidth: 25rem;
-  --labelHeight: 15rem;
+  --labelWidth: 20rem;
+  --labelHeight: 13rem;
+  --labelFontHeight00: 2.5rem;
 }
 
 #paramTitle {
@@ -26,23 +27,25 @@ main {
   /* position: relative; */
   /* left: 50%; */
   /* transform: translateX(-50%); */
-  position: fixed;
+  position: absolute;
   top: 15%;
   left: 0%;
   width: fit-content;
   padding: 2rem;
   border: 0.5rem solid white;
-  color: var(--spotifyColor);
+  border-left: none;
+  color: var(--color-primary-400);
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  background-color: solid var(--niceBlue);
+  background-color: solid var(--color-accent-400);
+  z-index: 0;
   /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
 
 /* ??? */
 /* #modTitle span { */
-/*   color: var(--niceBlue); */
+/*   color: var(--color-accent-400); */
 /* } */
 
 .wrapper {
@@ -82,7 +85,7 @@ input[type="checkbox"] {
 #infoCategory {
   position: absolute;
   top: -20%;
-  left: 1%;
+  left: 0%;
   color: var(--text-secondary);
   font-size: 2.5rem;
   font-weight: 400;
@@ -99,14 +102,15 @@ input[type="checkbox"] + label.visiblePart {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.7rem solid var(--text-color);
+  border: 0.7rem solid var(--text-primary);
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   overflow: hidden;
-  font-size: 3rem;
+  font-size: var(--labelFontHeight00);
   box-shadow: var(--box-shadow);
+  margin-top: 2rem;
 }
 
 #playlistInput + label.visiblePart {
@@ -153,7 +157,7 @@ input[type="radio"] + label {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 0.2rem solid var(--text-color);
+  border: 0.2rem solid var(--text-primary);
   font-size: 2rem;
   height: 5rem;
   width: 5rem;
@@ -162,7 +166,7 @@ input[type="radio"] + label {
 }
 
 input[type="radio"]:checked + label {
-  border: 0.5rem solid var(--spotifyColor);
+  border: 0.7rem var(--color-primary-300);
   border-radius: 50%;
   transition: all 0.001 ease-out;
 }
@@ -175,10 +179,10 @@ input[type="radio"]:checked + label {
   margin-bottom: 7rem;
   padding: 1rem;
   text-transform: uppercase;
-  background-color: var(--spotifyColor);
+  background-color: var(--color-primary-400);
   font-family: "Poppins", sans-serif;
   box-shadow: inset -2px -2px 3px rgb(59, 58, 58);
-  outline: 0.5rem solid var(--text-color);
+  outline: 0.5rem solid var(--text-primary);
   cursor: pointer;
 }
 
@@ -186,5 +190,5 @@ input[type="radio"]:checked + label {
   background-color: #269b4f;
   box-shadow:
     inset -2px -2px 3px rgb(59, 58, 58),
-    0px 0px 10px var(--spotifyColor);
+    0px 0px 10px var(--color-primary-400);
 }

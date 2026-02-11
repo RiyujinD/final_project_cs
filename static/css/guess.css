@@ -1,5 +1,3 @@
-
-
 .top_hr_wrapper {
   margin-top: 2rem;
   margin-bottom: 7rem;
@@ -28,15 +26,21 @@
 
 #container_songGuessing #mediaContainer #coverSongGuessing {
   position: relative;
-  -webkit-box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
-  0 0 30px rgba(255, 255, 255, 0.2), var(--box-shadow1);
-  -moz-box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
-  0 0 30px rgba(255, 255, 255, 0.2), var(--box-shadow1);
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3), 
-  0 0 30px rgba(255, 255, 255, 0.2), var(--box-shadow1);
+  -webkit-box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    var(--box-shadow1);
+  -moz-box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    var(--box-shadow1);
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.3),
+    0 0 30px rgba(255, 255, 255, 0.2),
+    var(--box-shadow1);
   width: 100%;
   height: 100%;
-  background-image: url('https://raw.githubusercontent.com/RiyujinD/final_project_cs50/master/static/images/radiohead2.jpg');
+  background-image: url("https://raw.githubusercontent.com/RiyujinD/final_project_cs50/master/static/images/radiohead2.jpg");
   background-size: cover;
   background-position: center;
   background-color: transparent;
@@ -48,41 +52,41 @@
 }
 
 #coverSongGuessing::after {
-  content: '';
+  content: "";
   position: absolute;
-  top: 160%; 
+  top: 160%;
   left: 0;
   height: inherit;
   width: inherit;
-  transform: scaleY(-0.6); 
+  transform: scaleY(-0.6);
   transform-origin: top;
   background-image: inherit;
-  background-size: inherit; 
+  background-size: inherit;
   background-position: inherit;
   filter: blur(3px) brightness(0.8);
   -webkit-filter: blur(3px) brightness(0.8);
   isolation: inherit;
   mask-image: linear-gradient(
-  to top,
-  rgba(0, 0, 0, 0.8) 0%,
-  rgba(0, 0, 0, 0.6) 30%,
-  rgba(0, 0, 0, 0.1) 60%,
-  rgba(0, 0, 0, 0.0) 100%
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.1) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
   -webkit-mask-image: linear-gradient(
-  to top,
-  rgba(0, 0, 0, 1) 0%,
-  rgba(0, 0, 0, 0.6) 30%,
-  rgba(0, 0, 0, 0.3) 60%,
-  rgba(0, 0, 0, 0.0) 100%
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.6) 30%,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0) 100%
   );
   mix-blend-mode: multiply;
 }
 
 #container_songGuessing #mediaContainer #coverSongGuessing .metadata_wrapper {
-  font-family: 'Montserrat', sans-serif;
-  display: none;           
-  flex-direction: column; 
+  font-family: "Montserrat", sans-serif;
+  display: none;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: absolute;
@@ -105,21 +109,21 @@
 }
 
 .metadata_wrapper .metadata_songTitle {
-  font-size: 2rem; 
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 .metadata_wrapper .metadata_artist {
-  font-size: 1.3rem; 
-  margin-top: .5rem;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 #container_songGuessing #mediaContainer #songGuessing_pp {
   position: absolute;
-  top: 50%;        
-  left: 64%;       
-  transform: translate(-0%, -50%);  
-  width: 21.9rem;  
+  top: 50%;
+  left: 64%;
+  transform: translate(-0%, -50%);
+  width: 21.9rem;
   height: 21.9rem;
   border-radius: 50%;
   z-index: 1;
@@ -149,14 +153,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4rem; 
+  height: 4rem;
   width: 4rem;
   border-radius: 50%;
-  background-color: hsl(240, 5%, 4%);
-  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1); 
-  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1); 
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1); 
-  outline: 3px solid var(--niceBlue);
+  background-color: var(--bg-primary);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+  outline: 3px solid var(--color-accent-400);
   cursor: pointer;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
@@ -164,10 +168,9 @@
 
 #svg-container svg {
   height: 2rem;
-  color: var(--niceBlue);
+  color: var(--color-accent-400);
   background-color: transparent;
   z-index: 100;
-  
 }
 
 #svg-container.hover_state {
@@ -177,7 +180,6 @@
 #svg-container:hover {
   animation: pulse 1s ease-in-out infinite;
 }
-
 
 @keyframes pulse {
   0% {
@@ -200,14 +202,12 @@
   align-items: flex-start;
 }
 
-
 #container_songGuessing #wrapper_infoAndForm p#artistGuessInfo {
   font-size: 1.5rem;
   letter-spacing: 0.4rem;
   padding: 0.7rem;
   color: var(--text-secondary);
 }
-
 
 #container_songGuessing #wrapper_infoAndForm .searchForm {
   position: relative;
@@ -225,12 +225,12 @@
   background-color: var(--glass-color, rgba(0, 0, 0, 0.3));
   font-size: 1.5rem;
   border: 0.13rem solid var(--text-secondary-dark);
-  color: var(--text-color, #fff);
+  color: var(--text-primary, #fff);
   outline: none;
 }
 
 .ryuji_button:focus {
-  outline: 0.155rem solid var(--niceBlue);
+  outline: 0.155rem solid var(--color-accent-400);
   border: none;
 }
 
@@ -244,8 +244,8 @@
   outline: 0.155rem solid hsla(0, 100%, 50%, 1); /* Red */
 }
 
-
-#searchIcon, #clear_button {
+#searchIcon,
+#clear_button {
   position: absolute;
   box-sizing: content-box;
   width: 1.5rem;
@@ -254,7 +254,9 @@
   color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   /*   color: var(--glass-textColor, rgba(255, 255, 255, 0.3)); */
-  transition: color 0.2s, filter 0.2s;
+  transition:
+    color 0.2s,
+    filter 0.2s;
 }
 
 #searchIcon {
@@ -271,36 +273,34 @@
 }
 
 .searchForm:focus-within #clear_button {
-  color: rgba(255, 255, 255, 0.7); 
+  color: rgba(255, 255, 255, 0.7);
 }
-
-
 
 @media screen and (max-width: 1300px) {
   #container_songGuessing {
     gap: 17rem;
   }
-  
+
   #container_songGuessing #mediaContainer {
     width: 15rem;
     height: 15rem;
   }
-  
-  #container_songGuessing #mediaContainer #songGuessing_pp {    
-    width: 15.5rem;  
+
+  #container_songGuessing #mediaContainer #songGuessing_pp {
+    width: 15.5rem;
     height: 15.5rem;
   }
-  
+
   #container_songGuessing #wrapper_infoAndForm .searchForm {
     width: 21.5rem;
   }
-  
+
   #container_songGuessing #mediaContainer #songGuessing_pp #svg-container {
-    height: 2.8rem; 
+    height: 2.8rem;
     width: 2.8rem;
-    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1); 
-    -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1); 
-    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1); 
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
   }
 }
 
@@ -311,46 +311,46 @@
     justify-content: start;
     gap: 10rem;
   }
-  
+
   #container_songGuessing #mediaContainer {
     width: 15rem;
     height: 15rem;
     margin-left: 3rem;
   }
-  
-  #container_songGuessing #mediaContainer #songGuessing_pp {     
-    width: 15.5rem;  
+
+  #container_songGuessing #mediaContainer #songGuessing_pp {
+    width: 15.5rem;
     height: 15.5rem;
   }
-  
+
   #container_songGuessing #wrapper_infoAndForm {
     justify-content: center;
     align-items: center;
     width: 100%;
   }
-  
+
   #container_songGuessing #wrapper_infoAndForm .searchForm {
     width: 70%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  
   #container_songGuessing #mediaContainer {
     width: 12rem;
     height: 12rem;
   }
-  
-  #container_songGuessing #mediaContainer #songGuessing_pp {    
-    width: 12.5rem;  
+
+  #container_songGuessing #mediaContainer #songGuessing_pp {
+    width: 12.5rem;
     height: 12.5rem;
   }
-  
+
   #container_songGuessing #mediaContainer #songGuessing_pp #svg-container {
-    height: 2.4rem; 
+    height: 2.4rem;
     width: 2.4rem;
-    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1); 
-    -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1); 
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1); 
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 1);
   }
 }
+
