@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkbox.addEventListener('change', () => {
 
       if (checkbox.checked) {
-        label.style.borderColor = 'var(--spotifyColor)';
+        label.style.borderColor = 'var(--color-primary-400)';
       }
       else {
         label.style.borderColor = 'white';

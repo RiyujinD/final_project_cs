@@ -32,17 +32,17 @@ main {
   width: fit-content;
   padding: 2rem;
   border: 0.5rem solid white;
-  color: var(--spotifyColor);
+  color: var(--color-primary-400);
   font-weight: 500;
   font-size: 4rem;
   text-transform: uppercase;
-  background-color: solid var(--niceBlue);
+  background-color: solid var(--color-accent-400);
   /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
 
 /* ??? */
 /* #modTitle span { */
-/*   color: var(--niceBlue); */
+/*   color: var(--color-accent-400); */
 /* } */
 
 .wrapper {
@@ -99,7 +99,7 @@ input[type="checkbox"] + label.visiblePart {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 0.7rem solid var(--text-color);
+  border: 0.7rem solid var(--text-primary);
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
@@ -153,7 +153,7 @@ input[type="radio"] + label {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 0.2rem solid var(--text-color);
+  border: 0.2rem solid var(--text-primary);
   font-size: 2rem;
   height: 5rem;
   width: 5rem;
@@ -162,7 +162,7 @@ input[type="radio"] + label {
 }
 
 input[type="radio"]:checked + label {
-  border: 0.5rem solid var(--spotifyColor);
+  border: 0.5rem solid var(--color-primary-400);
   border-radius: 50%;
   transition: all 0.001 ease-out;
 }
@@ -175,10 +175,10 @@ input[type="radio"]:checked + label {
   margin-bottom: 7rem;
   padding: 1rem;
   text-transform: uppercase;
-  background-color: var(--spotifyColor);
+  background-color: var(--color-primary-400);
   font-family: "Poppins", sans-serif;
   box-shadow: inset -2px -2px 3px rgb(59, 58, 58);
-  outline: 0.5rem solid var(--text-color);
+  outline: 0.5rem solid var(--text-primary);
   cursor: pointer;
 }
 
@@ -186,5 +186,5 @@ input[type="radio"]:checked + label {
   background-color: #269b4f;
   box-shadow:
     inset -2px -2px 3px rgb(59, 58, 58),
-    0px 0px 10px var(--spotifyColor);
+    0px 0px 10px var(--color-primary-400);
 }
