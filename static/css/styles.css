@@ -1,24 +1,117 @@
-/* Variable and preset to use around the all app */
 :root {
   font-family: "Montserrat", sans-serif;
-  --width_button: 90px;
-  --height_button: 40px;
-  --svg_size: 50px;
-  --spotifyColor: #1db954;
-  --niceBlue: rgba(0, 255, 255, 0.8);
-  --text-secondary-dark: rgb(139, 148, 158);
-  --text-secondary-light: rgb(71, 76, 80);
+
+  --width-button-lightswitch: 90px;
+  --height-button-lightswitch: 40px;
+  --svg-size-lightswitch: 50px;
+
+  /* need to make margin and padding normalisation */
+  --margin-xs: 0.5rem;
+  --margin-s: 1rem;
+
+  /* Neutral */
+  --color-neutral-50: oklch(0.98 0.002 270);
+  --color-neutral-100: oklch(0.96 0.003 270);
+  --color-neutral-200: oklch(0.92 0.005 270);
+  --color-neutral-300: oklch(0.85 0.007 270);
+  --color-neutral-400: oklch(0.7 0.01 270);
+  --color-neutral-500: oklch(0.55 0.012 270);
+  --color-neutral-600: oklch(0.45 0.012 270);
+  --color-neutral-700: oklch(0.35 0.01 270);
+  --color-neutral-800: oklch(0.18 0.01 270);
+  --color-neutral-900: oklch(0.12 0.008 270);
+  --color-neutral-950: oklch(0.08 0.01 270);
+
+  /* Primary */
+  --color-primary-50: oklch(0.959 0.068 150.14);
+  --color-primary-100: oklch(0.915 0.146 149.69);
+  --color-primary-200: oklch(0.829 0.225 148.99);
+  --color-primary-300: oklch(0.763 0.207 148.86);
+  --color-primary-400: oklch(0.689 0.187 148.92); /* Base */
+  --color-primary-500: oklch(0.596 0.161 148.97);
+  --color-primary-600: oklch(0.502 0.136 148.92);
+  --color-primary-700: oklch(0.41 0.111 148.8);
+  --color-primary-800: oklch(0.319 0.087 148.71);
+  --color-primary-900: oklch(0.224 0.061 149.06);
+  --color-primary-950: oklch(0.183 0.05 147.96);
+
+  /* Accent */
+  --color-accent-50: oklch(0.99 0.015 196.79);
+  --color-accent-100: oklch(0.979 0.03 196.61);
+  --color-accent-200: oklch(0.958 0.063 196.12);
+  --color-accent-300: oklch(0.926 0.117 195.31);
+  --color-accent-400: oklch(0.905 0.155 194.76); /* Base - your niceBlue */
+  --color-accent-500-50: oklch(0.776 0.133 194.76 / 0.5); /* For HR */
+  --color-accent-500: oklch(0.776 0.133 194.76);
+  --color-accent-600: oklch(0.651 0.111 194.76);
+  --color-accent-700: oklch(0.525 0.09 194.76);
+  --color-accent-800: oklch(0.39 0.067 194.76);
+  --color-accent-900: oklch(0.262 0.045 194.76);
+  --color-accent-950: oklch(0.201 0.034 194.76);
+
+  /* Semantic */
+  --color-success-400: var(--color-primary-400); /* base primary */
+  --color-error-400: oklch(0.628 0.258 29.23);
+  --color-warning-400: oklch(0.802 0.171 85.59);
+  --color-info-400: var(--color-accent-400); /* base accent */
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --bg-color: hsl(240, 5%, 4%);
-  --text-color: #f5f5f5;
-  --text-secondary: var(--niceBlue);
-  --hr-color: rgba(255, 255, 255, 0.5);
+  /* Backgrounds */
+  --bg-primary: var(--color-neutral-950);
+  --bg-secondary: var(--color-neutral-900);
+  --bg-tertiary: var(--color-neutral-800);
+
+  /* Text */
+  --text-primary: var(--color-neutral-50);
+  --text-secondary: var(--color-neutral-400); /* Medium gray for secondary */
+  --text-tertiary: var(--color-neutral-600);
+  --text-accent: var(--color-accent-400); /* Your blue for links/highlights */
+
+  /* hr */
+  --hr-color: rgba(0, 255, 255, 0.8);
+
+  /* Borders */
+  --border-primary: var(--color-neutral-700);
+  --border-secondary: var(--color-neutral-600);
+
+  /* Interactive */
+  --interactive-primary: var(--color-accent-400);
+  --interactive-hover: var(--color-accent-300);
+  --interactive-inactive: var(--color-accent-700);
+
+  /* Shadow & Glow Colors (RGBA for transparency) */
+  --shadow-glow-white: rgba(255, 255, 255, 0.3);
+  --shadow-glow-white-soft: rgba(255, 255, 255, 0.2);
+  --shadow-glow-cyan: rgba(0, 255, 255, 0.8);
+  --shadow-glow-cyan-soft: rgba(0, 255, 255, 0.6);
+  --shadow-glow-green: rgba(40, 197, 66, 0.45);
+  --shadow-ambient-dark: rgba(0, 0, 0, 0.74);
+  --shadow-ambient-medium: rgba(0, 0, 0, 0.5);
+  --shadow-ambient-strong: rgba(0, 0, 0, 0.7);
+  --shadow-inset-highlight: rgba(255, 255, 255, 0.2);
+  --shadow-inset-highlight-strong: rgba(255, 255, 255, 1);
+
+  /* Glass effect */
+  --glass-bg: rgba(0, 0, 0, 0.3);
+  --glass-text: rgba(255, 255, 255, 0.3);
+  --glass-icon-color: rgba(0, 255, 255, 0.8);
+  --glass-icon-glow: drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.8));
+
+  /* Theme toggle button */
+  --theme-toggle-button-bg: linear-gradient(
+    to bottom,
+    hsl(240, 5%, 6%) 0%,
+    hsl(240, 5%, 4%) 50%,
+    hsl(240, 5%, 2%) 100%
+  );
+  --theme-toggle-button-glow: drop-shadow(0px 0px 7px rgba(0, 255, 255, 0.8));
+
+  /* to remove */
   --box-shadow1:
-    0px 25px 20px -20px rgba(40, 197, 66, 0.45),
-    0 0 10px rgba(255, 255, 255, 0.2);
+    0px 25px 20px -20px var(--color-primary-300),
+    0 0 10px rgba(255, 255, 255, 0.2); /* ? */
   --box-shadowItem:
     inset 0px 0px 20px 8px rgba(0, 0, 0, 0.74),
     inset 8px 5px 13px 2px rgba(255, 255, 255, 0.2);
@@ -27,18 +120,8 @@
     inset 0 2px 3px rgba(255, 255, 255, 1),
     inset 0 -1px 4px 0px rgba(255, 255, 255, 1);
   --carrousel-boxShadow: none;
-  --border1: rgba(255, 255, 255, 0.5);
 
-  /* Theme toggle button */
-  --button-bg: linear-gradient(
-    to bottom,
-    hsl(240, 5%, 6%) 0%,
-    hsl(240, 5%, 4%) 50%,
-    hsl(240, 5%, 2%) 100%
-  );
-  --outline: 2px solid rgba(100, 0, 233, 0.6);
-  --glow: drop-shadow(0px 0px 7px rgba(0, 255, 255, 0.8));
-
+  /* to remove */
   /*Glass box alike in index route */
   --glass-color: rgba(0, 0, 0, 0.3);
   --glass-textColor: rgba(255, 255, 255, 0.3);
@@ -48,16 +131,66 @@
 
 /* Light Theme */
 [data-theme="light"] {
-  --bg-color: rgba(255, 255, 255, 0.479);
-  --text-color: black;
-  --text-secondary: var(--text-secondary-light);
+  /* Backgrounds */
+  --bg-primary: var(--color-neutral-50);
+  --bg-secondary: var(--color-neutral-100);
+  --bg-tertiary: var(--color-neutral-200);
+
+  /* Text */
+  --text-primary: var(--color-neutral-900);
+  --text-secondary: var(--color-neutral-600); /* Darker gray for readability */
+  --text-tertiary: var(--color-neutral-500);
+  --text-accent: var(--color-accent-600); /* Darker blue for contrast */
+
+  /* Borders */
+  --border-primary: var(--color-neutral-300);
+  --border-secondary: var(--color-neutral-200);
+
+  /* HR */
   --hr-color: rgba(0, 0, 0, 0.5);
+
+  /* Interactive elements */
+  --interactive-primary: var(--color-accent-600);
+  --interactive-hover: var(--color-accent-500);
+  --interactive-active: var(--color-accent-700);
+
+  /* Shadow & Glow Colors (RGBA for transparency) */
+  --shadow-glow-white: rgba(255, 255, 255, 0.8);
+  --shadow-glow-white-soft: rgba(255, 255, 255, 1);
+  --shadow-glow-green: rgba(40, 197, 66, 0.575);
+  --shadow-ambient-dark: rgba(0, 0, 0, 0.4);
+  --shadow-ambient-medium: rgba(0, 0, 0, 0.5);
+  --shadow-inset-highlight: rgba(255, 255, 255, 1);
+  --shadow-blue-deep: rgb(38, 57, 77);
+
+  /* Glass effect */
+  --glass-bg: linear-gradient(
+    135deg,
+    rgba(255, 253, 253, 0.24),
+    rgba(255, 253, 253, 0.1)
+  );
+  --glass-text: rgba(0, 0, 0, 0.4);
+  --glass-icon-color: rgb(35, 136, 204);
+  --glass-icon-glow: drop-shadow(0px 0px 10px rgb(14, 156, 212));
+
+  /* Button effects */
+  --button-bg: linear-gradient(to right, #222, #444);
+  --button-glow: drop-shadow(0px 0px 7px rgba(76, 175, 80, 0.8));
+
+  /* Theme toggle button */
+  --theme-toggle-button-bg: linear-gradient(
+    to bottom,
+    hsl(240, 5%, 6%) 0%,
+    hsl(240, 5%, 4%) 50%,
+    hsl(240, 5%, 2%) 100%
+  );
+  --theme-toggle-button-glow: drop-shadow(0px 0px 7px rgba(0, 255, 255, 0.8));
+
+  /* to remove */
   --box-shadow1:
     13px 13px 10px -4px rgba(0, 0, 0, 0.4), 5px 3px 6px -2px rgba(0, 0, 0, 0.5),
     inset 4px 15px 13px -14px rgba(255, 255, 255, 1),
     0px 25px 25px -35px rgba(40, 197, 66, 0.575);
-
-  --border1: rgba(0, 0, 0, 0.5);
 
   --box-shadow:
     13px 13px 10px -4px rgba(0, 0, 0, 0.4), 5px 3px 6px -2px rgba(0, 0, 0, 0.5),
@@ -75,8 +208,7 @@
 
   /* Theme toggle button */
   --button-bg: linear-gradient(to right, #222, #444);
-  --outline: 2px solid hsla(204, 35%, 74%, 0.6);
-  --glow: drop-shadow(0px 0px 7px rgba(0, 255, 0, 0.8));
+  --glow: drop-shadow(0px 0px 7px var(--color-primary-300));
 
   /*Glass box alike in index route */
   --glass-color: linear-gradient(
@@ -100,8 +232,8 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   transition:
     background 1s ease,
     color 1s ease;
@@ -117,24 +249,22 @@ hr {
   background-color: var(--hr-color);
   border: none;
   height: 0.1rem;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
-/* Change width of the default scrollbar */
+/* Width of scrollbar */
 body::-webkit-scrollbar {
   width: 1rem;
 }
-/* Change the color of the track */
+/* Color of track */
 body::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: var(--color-accent-900);
 }
-/* Change the thumb (scrollable part */
+/* thumb (scrollable part) */
 body::-webkit-scrollbar-thumb {
-  background: rgba(116, 105, 105, 0.3);
+  background: var(--color-accent-700);
   border-radius: 10px;
 }
-
-/* Thinner scrollbar on smaller screen */
 @media (max-width: 600px) {
   body::-webkit-scrollbar {
     width: 0.9rem;
@@ -149,7 +279,9 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: hsl(240, 5%, 4%);
+  background: var(--bg-primary);
+  outline: none;
+  border: none;
 }
 
 .nav-section {
@@ -160,21 +292,13 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  border: solid red;
-  /* visibility: hidden; */
+  outline: none;
 }
 
 @media (max-width: 1600px) {
   .nav-section {
     padding-inline: none;
   }
-}
-
-/* .nav-left, */
-/* .nav-right { */
-/*   flex-shrink: 0; */
-/*   min-width: 3%; */
-/*   max-width: 7%; */
 }
 
 .nav-logs {
@@ -187,7 +311,7 @@ body::-webkit-scrollbar-thumb {
   padding-top: 1.2rem;
   text-align: center;
   text-decoration: none;
-  color: var(--niceBlue);
+  color: var(--color-accent-400);
 }
 
 .nav-icon {
@@ -215,8 +339,8 @@ i.nav-icon {
 .navText-separator {
   height: 2.5rem;
   width: 1px;
-  color: #1db954;
-  background-color: var(--niceBlue);
+  color: var(--color-primary-400);
+  background-color: var(--color-accent-400);
   opacity: 0.5;
 }
 
@@ -226,31 +350,24 @@ i.nav-icon {
 
 /* center links */
 .nav-center {
-  flex-grow: 1;
   justify-content: center;
   gap: 5rem;
   list-style: none;
-  color: var(--niceBlue);
-}
-
-.nav-center p {
-  opacity: 0.4;
 }
 
 .nav-text {
   font-size: 1.5rem;
-  color: var(--niceBlue);
+  color: var(--interactive-inactive);
   text-transform: uppercase;
   text-decoration: none;
-  opacity: 0.6;
   transition: opacity 0.2s;
 }
 .nav-text:hover {
-  opacity: 1;
+  color: var(--interactive-hover);
 }
 
 .navText-active {
-  opacity: 1;
+  color: var(--interactive-primary);
 }
 
 /* Night/light Mod button left side navbar*/
@@ -273,12 +390,14 @@ input[type="checkbox"]#theme_toggle + label {
 /* New checkbox styling */
 input[type="checkbox"]#theme_toggle + label::before {
   content: "";
-  width: var(--width_button);
-  height: var(--height_button);
-  border-radius: calc(max(var(--height_button), var(--width_button)) / 2);
+  width: var(--width-button-lightswitch);
+  height: var(--height-button-lightswitch);
+  border-radius: calc(
+    max(var(--height-button-lightswitch), var(--width-button-lightswitch)) / 2
+  );
   cursor: pointer;
   transition: box-shadow 1s ease-in-out;
-  outline: 2px solid var(--niceBlue);
+  outline: 2px solid var(--color-accent-400);
 }
 
 input[type="checkbox"]#theme_toggle + label:hover svg {
@@ -287,8 +406,8 @@ input[type="checkbox"]#theme_toggle + label:hover svg {
 
 /* SVG styling */
 label svg {
-  height: var(--svg_size);
-  width: var(--svg_size);
+  height: var(--svg-size-lightswitch);
+  width: var(--svg-size-lightswitch);
   position: absolute;
   cursor: pointer;
   top: 50%;
@@ -299,7 +418,10 @@ label svg {
 
 /* ANIMATIONS: dynamically add in js scripts/js depending on checkbox state */
 .offsetCheck {
-  transform: translate(calc(var(--width_button) - var(--svg_size)), -52%)
+  transform: translate(
+      calc(var(--width-button-lightswitch) - var(--svg-size-lightswitch)),
+      -52%
+    )
     rotate(360deg);
 }
 
@@ -340,17 +462,17 @@ label svg {
 }
 /* END OF ANIMATIONS */
 
-#navbar::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 85%;
-  transform: translateX(-50%);
-  height: 1px;
-  background: var(--niceBlue);
-  transition:
-    left 300ms ease,
-    width 300ms ease;
-  opacity: 0.2;
-}
+/* #navbar::after { */
+/*   content: ""; */
+/*   position: absolute; */
+/*   bottom: 0; */
+/*   left: 50%; */
+/*   width: 85%; */
+/*   transform: translateX(-50%); */
+/*   height: 1px; */
+/*   background: var(--color-accent-400); */
+/*   transition: */
+/*     left 300ms ease, */
+/*     width 300ms ease; */
+/*   opacity: 0.2; */
+/* } */
